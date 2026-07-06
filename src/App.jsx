@@ -31,6 +31,12 @@ export default function App() {
         />
       </section>
       <EventDetails />
+      <footer className="site-footer">
+        <p>
+          made with <span className="footer-heart" aria-label="love">&#9829;</span> by
+          Abhishek Chandrasenan
+        </p>
+      </footer>
     </main>
   )
 }

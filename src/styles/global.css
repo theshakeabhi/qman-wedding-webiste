@@ -560,6 +560,27 @@ section {
   padding-inline: 2em;
 }
 
+/* ============ footer ============ */
+.site-footer {
+  text-align: center;
+  padding: clamp(2.5rem, 9vw, 4rem) var(--page-pad)
+    calc(env(safe-area-inset-bottom, 0px) + 1.75rem);
+  border-top: 1px solid var(--hairline);
+  margin-top: clamp(3rem, 10vw, 5rem);
+}
+
+.site-footer p {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.footer-heart {
+  color: var(--accent);
+  font-size: 0.85em;
+}
+
 /* ============ motion ============ */
 @media (prefers-reduced-motion: reduce) {
   .cue {
