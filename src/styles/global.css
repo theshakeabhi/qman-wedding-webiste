@@ -577,8 +577,9 @@ section {
 }
 
 .footer-heart {
-  color: var(--accent);
-  font-size: 0.85em;
+  color: #e23744;
+  font-size: 1.3em;
+  vertical-align: -0.1em;
 }
 
 /* ============ motion ============ */
