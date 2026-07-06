@@ -1,4 +1,4 @@
-import { CALENDAR_URL, DATE_LINE, MAPS_URL, TIME_LINE, VENUE } from '../config.js'
+import { EVENTS, LOCATION_URL } from "../config.js";
 
 export default function EventDetails() {
   return (
@@ -14,36 +14,55 @@ export default function EventDetails() {
         </div>
 
         <div className="info">
-          <p className="eyebrow">Event Details</p>
-          <h2 className="duo-name">The Muhurtham</h2>
+          <h2 className="duo-name">Event Details</h2>
           <dl className="ledger">
-            <div className="ledger-row">
-              <dt>When</dt>
-              <dd>
-                {DATE_LINE}
-                <br />
-                {TIME_LINE}
-              </dd>
-            </div>
-            <div className="ledger-row">
-              <dt>Where</dt>
-              <dd>
-                {VENUE.name}
-                <br />
-                {VENUE.place}
-              </dd>
-            </div>
+            {EVENTS.map((event) => (
+              <div className="ledger-row" key={event.label}>
+                <dt>{event.label}</dt>
+                <dd>
+                  {event.time}
+                  <br />
+                  <a
+                    className="venue-link"
+                    href={event.mapUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {event.venue}
+                    <svg
+                      className="ext-icon"
+                      viewBox="0 0 24 24"
+                      width="0.75em"
+                      height="0.75em"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"
+                      />
+                    </svg>
+                  </a>
+                </dd>
+              </div>
+            ))}
           </dl>
-          <div className="pill-row">
-            <a className="pill pill--primary" href={MAPS_URL} target="_blank" rel="noreferrer">
-              Open in Maps
-            </a>
-            <a className="pill pill--ghost" href={CALENDAR_URL} target="_blank" rel="noreferrer">
-              Add to Calendar
-            </a>
-          </div>
         </div>
       </div>
+
+      <div className="event-cta">
+        <a
+          className="pill pill--primary location-pill"
+          href={LOCATION_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Location &amp; Details
+        </a>
+      </div>
     </section>
-  )
+  );
 }

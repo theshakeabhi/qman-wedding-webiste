@@ -20,8 +20,30 @@ export const VENUE = {
   place: 'Chelari, Kerala',
 }
 
+// The day's two events, shown in the details ledger.
+// venue links open the venue's Google Maps place in a new tab.
+export const EVENTS = [
+  {
+    label: 'Wedding',
+    time: '10:30 AM – 11:30 AM',
+    venue: 'Century Auditorium, Chelari',
+    mapUrl:
+      'https://www.google.com/maps/place/Century+Auditorium+Chelari/@11.1135101,75.8858792,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba651ef56b1dfad:0x28e702eb71a9f308!8m2!3d11.1135101!4d75.8884541!16s%2Fg%2F1tf68h5p?entry=tts&g_ep=EgoyMDI2MDYwMy4xIPu8ASoASAFQAw%3D%3D&skid=3ffbfbc9-0340-4550-a020-71c7ac9afda6',
+  },
+  {
+    label: 'Reception',
+    time: '5 PM – 9 PM',
+    venue: 'Vintage 1955 Convention Centre, Kuttoolangadi, Farook College',
+    mapUrl:
+      'https://www.google.com/maps/place/1955+Vintage/@11.1927051,75.8601994,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba65b007ab11f39:0x5f5934987ac36537!8m2!3d11.1927051!4d75.8601994!16s%2Fg%2F11vr7v309p?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D',
+  },
+]
+
 export const MAPS_URL =
   'https://www.google.com/maps/search/?api=1&query=Century+Auditorium+Chelari+Kerala'
+
+// Linktree with directions / location details for the venues.
+export const LOCATION_URL = 'https://linktr.ee/Sreehari_Athulya'
 
 // 10:30–11:30 AM IST expressed in UTC (05:00–06:00Z)
 export const CALENDAR_URL =
@@ -33,8 +55,8 @@ export const CALENDAR_URL =
 // Set src to a path under public/ (e.g. '/photos/sreehari.jpg') once real
 // photos exist; null renders the styled placeholder instead.
 export const PHOTOS = {
-  groom: { src: null, alt: 'Sreehari' },
-  bride: { src: null, alt: 'Athulya' },
+  groom: { src: '/photos/sreehari.webp', alt: 'Sreehari' },
+  bride: { src: '/photos/athulya.webp', alt: 'Athulya' },
 }
 
 // The couple photo that fills the hero split-circle. Athulya is on the left of
@@ -48,13 +70,13 @@ export const HERO_PHOTO = '/photos/couple.webp'
 export const BIOS = {
   groom: {
     eyebrow: 'The Groom',
-    lines: ['A few warm lines about Sreehari go here —', 'his family, his home, what makes him him.'],
-    detail: 'Family · Place',
+    lines: ['S/O Asokan AC & Rajani N', 'Alungal Chembeettil', 'Farook College'],
+    detail: 'Calicut',
   },
   bride: {
     eyebrow: 'The Bride',
-    lines: ['A few warm lines about Athulya go here —', 'her family, her home, what makes her her.'],
-    detail: 'Family · Place',
+    lines: ['D/O Radhakrishnan AV & Anila K', 'Avathaan Veettil', 'Chelari'],
+    detail: 'Malappuram',
   },
 }
 

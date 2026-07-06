@@ -1,5 +1,5 @@
 import { useCountdown } from '../hooks/useCountdown.js'
-import { CEREMONY_END, WEDDING_TIMESTAMP } from '../config.js'
+import { CALENDAR_URL, CEREMONY_END, WEDDING_TIMESTAMP } from '../config.js'
 
 const pad = (n) => String(n).padStart(2, '0')
 
@@ -40,6 +40,17 @@ export default function Countdown() {
       </div>
 
       <p className="countdown-date">Sunday, 23 August 2026 · 10:30 AM IST</p>
+
+      <div className="countdown-cta">
+        <a
+          className="pill pill--ghost"
+          href={CALENDAR_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Add to Calendar
+        </a>
+      </div>
     </section>
   )
 }

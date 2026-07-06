@@ -27,6 +27,13 @@ body {
   overflow-x: clip;
 }
 
+/* thin inset around the whole page on mobile so nothing hugs the screen edge */
+@media (max-width: 640px) {
+  body {
+    padding: 0px 8px;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -340,6 +347,12 @@ section {
   color: var(--ink-soft);
 }
 
+.countdown-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(1.5rem, 5vw, 2.25rem);
+}
+
 /* ============ alternating split (the reference pattern) ============
    Never stacks — the half-photo/half-text split IS the theme, down to 320px. */
 .duo {
@@ -472,6 +485,26 @@ section {
   line-height: 1.5;
 }
 
+/* venue as a text link: no colour change, just an underline + external-link icon */
+.venue-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--hairline);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.venue-link:hover {
+  text-decoration-color: currentColor;
+}
+
+.ext-icon {
+  display: inline-block;
+  margin-inline-start: 0.35em;
+  vertical-align: -0.05em; /* sits on the text baseline */
+  flex: none;
+}
+
 /* pills: two semicircles already joined — the thesis at button scale */
 .pill-row {
   display: flex;
@@ -513,6 +546,18 @@ section {
 
 .pill--ghost:active {
   background: var(--accent-soft);
+}
+
+/* closing location button, centred beneath the details */
+.event-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2.5rem, 9vw, 4rem);
+  padding-inline: var(--page-pad);
+}
+
+.location-pill {
+  padding-inline: 2em;
 }
 
 /* ============ motion ============ */
