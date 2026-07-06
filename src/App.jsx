@@ -36,7 +36,10 @@ export default function App() {
           made with <span className="footer-heart" aria-label="love">&#9829;</span> by
           Abhishek Chandrasenan
         </p>
-        <p className="footer-sub">and with the emotional support of Nourin</p>
+        <p className="footer-sub">and</p>
+        <p className="footer-sub">with the emotional support of Nourin</p>
+        <p className="footer-sub">and</p>
+        <p className="footer-sub">bribed with a silver kara mundu</p>
       </footer>
     </main>
   )
