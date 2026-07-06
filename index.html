@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1D120B" />
+    <!-- Hero couple photo: preload so the browser fetches it during HTML parse
+         rather than after the JS bundle mounts (it's a CSS background, otherwise
+         invisible to the preload scanner). Keep in sync with HERO_PHOTO. -->
+    <link rel="preload" as="image" href="/photos/couple.webp" fetchpriority="high" />
+    <title>Athulya &amp; Sreehari — 23 August 2026</title>
+    <meta
+      name="description"
+      content="With love and prayers, our families invite you. Sunday, 23 August 2026 · 10:30 AM · Century Auditorium, Chelari, Kerala."
+    />
+    <meta property="og:title" content="Athulya &amp; Sreehari — Wedding" />
+    <meta
+      property="og:description"
+      content="Sunday, 23 August 2026 · 10:30 AM · Century Auditorium, Chelari, Kerala"
+    />
+    <meta property="og:type" content="website" />
+    <!-- WhatsApp/social link preview. og:image MUST be an absolute https URL —
+         replace the placeholder host with the real deployed domain, or the
+         preview card shows no image. couple.png (raster) is used because
+         WhatsApp/Facebook do not reliably render WebP preview thumbnails. -->
+    <meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/photos/couple.png" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1237" />
+    <meta property="og:image:alt" content="Athulya and Sreehari" />
+    <meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231D120B'/%3E%3Cpath d='M14 4a12 12 0 0 0 0 24z' fill='%23D9A45B'/%3E%3Cpath d='M18 4a12 12 0 0 1 0 24z' fill='%23F3E7D3'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

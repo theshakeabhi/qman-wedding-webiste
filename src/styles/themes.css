@@ -1,0 +1,16 @@
+/* Candlelight — deep espresso darkness, amber glow, cream serif.
+
+   --accent       large decorative color (hero halves, ampersand, gradients)
+   --accent-deep  text-safe accent: eyebrows, small labels, pill/date-sun fills
+   --on-accent    text reversed out of --accent-deep                          */
+
+:root {
+  --surface: #1d120b;
+  --ink: #f3e7d3;
+  --ink-soft: #cbb79c;
+  --accent: #d9a45b;
+  --accent-soft: #2a1b10;
+  --accent-deep: #d9a45b;
+  --hairline: #3b2a1b;
+  --on-accent: #23150b;
+}
