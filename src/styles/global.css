@@ -582,6 +582,15 @@ section {
   vertical-align: -0.1em;
 }
 
+.footer-sub {
+  margin-top: 0.6rem;
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+
 /* ============ motion ============ */
 @media (prefers-reduced-motion: reduce) {
   .cue {
